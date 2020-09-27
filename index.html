@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+    Author: Payton Dwyer   
+    Class: Software Engineering
+    Description: Regular Expression applicaton 
+-->
+<head>
+    <meta charset="UTF-8">
+    <title>Regular Expressions</title>
+    <script>
+       function TestRegExp() {
+        var str = document.getElementById("input1").value;
+        var patt = new RegExp(document.getElementById("input2").value);
+        var res = patt.test(str);
+        document.getElementById("regexpResultsID").innerHTML = res
+       }
+    </script>
+</head>
+    <body>
+        <h1>Regular Expressions</h1>
+        <input id="input1" type="text" value="enter string" size="15"><br>
+        <input id="input2" type="text" value="enter regexp" size="10"><br>
+        <button type="button" onclick="TestRegExp()">Test RegExp</button><br>
+        Results: <p id="regexpResultsID"></p>
+    </body>
+</html>
